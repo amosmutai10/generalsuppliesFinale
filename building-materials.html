@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Materials - General Supplies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <span>GS</span>
+                </div>
+                <span class="logo-text">General Supplies</span>
+            </a>
+
+            
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="building-materials.html" class="nav-link active">Building Materials</a>
+                <a href="fencing-materials.html" class="nav-link">Fencing Materials</a>
+                <a href="water-systems.html" class="nav-link">Water Tanks and Systems</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="menu-icon">☰</span>
+                <span class="close-icon" style="display: none;">✕</span>
+            </button>
+
+            
+            <div class="nav-mobile" id="mobileNav">
+                <nav class="mobile-nav-content">
+                    <a href="index.html" class="nav-link" onclick="closeMobileMenu()">Home</a>
+                    <a href="about.html" class="nav-link" onclick="closeMobileMenu()">About Us</a>
+                    <a href="building-materials.html" class="nav-link" onclick="closeMobileMenu()">Building Materials</a>
+                    <a href="fencing-materials.html" class="nav-link" onclick="closeMobileMenu()">Fencing Materials</a>
+                    <a href="water-systems.html" class="nav-link" onclick="closeMobileMenu()">Water Tanks and Systems</a>
+                    <a href="contact.html" class="nav-link" onclick="closeMobileMenu()">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="product-gallery-section">
+            
+            <div class="product-hero">
+                <div class="product-hero-overlay"></div>
+                <div class="container">
+                    <div class="product-badge">PREMIUM CONSTRUCTION MATERIALS</div>
+                    <h1 class="product-hero-title">Quality Building Materials</h1>
+                    <p class="product-hero-description">International standard construction supplies with worldwide delivery and expert support</p>
+                </div>
+            </div>
+
+            
+            <div class="container product-controls">
+                <div class="search-filter-container">
+                    <input type="text" id="productSearch" placeholder="Search products..." class="search-input" onkeyup="filterProducts()">
+                    <div class="category-filters">
+                        <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+                        <button class="filter-btn" onclick="filterByCategory('Doors')">Doors</button>
+                        <button class="filter-btn" onclick="filterByCategory('Cement')">Cement</button>
+                        <button class="filter-btn" onclick="filterByCategory('Nails')">Nails</button>
+                        <button class="filter-btn" onclick="filterByCategory('Roofing')">Roofing</button>
+                        <button class="filter-btn" onclick="filterByCategory('Steel')">Steel Bars</button>
+                        <button class="filter-btn" onclick="filterByCategory('Timber')">Timber</button>
+                        <button class="filter-btn" onclick="filterByCategory('Tiles')">Tiles & Flooring</button>
+                    </div>
+                </div>
+
+                
+                <div class="products-grid" id="productsGrid">
+                    
+                    <!-- Representative Products for "All" tab -->
+                    <div class="product-card" data-category="Doors" data-name="Doors">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/1.jpg" alt="Doors" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Doors</h3>
+                            <a href="#" onclick="filterByCategory('Doors'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Cement" data-name="Cement">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/IMG-20250921-WA0116.jpg" alt="Cement" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Cement</h3>
+                            <a href="#" onclick="filterByCategory('Cement'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Nails" data-name="Nails">
+                        <div class="product-image">
+                            <img src="public/building-materials/nls/b2.jpg" alt="Nails" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Nails</h3>
+                            <a href="#" onclick="filterByCategory('Nails'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Roofing" data-name="Roofing">
+                        <div class="product-image">
+                            <img src="public/building-materials/rf/IMG-20250921-WA0171.jpg" alt="Roofing" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Roofing</h3>
+                            <a href="#" onclick="filterByCategory('Roofing'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Steel" data-name="Steel Bars">
+                        <div class="product-image">
+                            <img src="public/building-materials/st/1w.jpg" alt="Steel Bars" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Steel Bars</h3>
+                            <a href="#" onclick="filterByCategory('Steel'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Timber" data-name="Timber">
+                        <div class="product-image">
+                            <img src="public/building-materials/t/a1.jpg" alt="Timber" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Timber</h3>
+                            <a href="#" onclick="filterByCategory('Timber'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tiles" data-name="Flooring and Tiles">
+                        <div class="product-image">
+                            <img src="public/building-materials/tls/IMG-20250921-WA0047.jpg" alt="Flooring and Tiles" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Flooring and Tiles</h3>
+                            <a href="#" onclick="filterByCategory('Tiles'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <!-- Detailed products removed per request to keep only representative cards. -->
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Wooden Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/3.jpg" alt="Wooden Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Wooden Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 4500</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Wooden Door', 'KSh 4500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Security Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/4.jpg" alt="Security Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Security Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 12000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Security Door', 'KSh 12000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Glass Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/5.jpg" alt="Glass Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Glass Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 8500</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Glass Door', 'KSh 8500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Sliding Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/6.jpg" alt="Sliding Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Sliding Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 9500</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Sliding Door', 'KSh 9500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Double Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/7.jpg" alt="Double Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Double Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 15000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Double Door', 'KSh 15000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="French Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/8.jpg" alt="French Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">French Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 18000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('French Door', 'KSh 18000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Garage Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/9.jpg" alt="Garage Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Garage Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 22000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Garage Door', 'KSh 22000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Modern Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/10.jpg" alt="Modern Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Modern Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 25000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Modern Door', 'KSh 25000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Additional Door Images -->
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Door Frame">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0166.jpg" alt="Door Frame" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Door Frame</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 3500</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Door Frame', 'KSh 3500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Steel Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0142.jpg" alt="Steel Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Steel Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 8000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Steel Door', 'KSh 8000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Aluminum Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0129.jpg" alt="Aluminum Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Aluminum Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 12000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Aluminum Door', 'KSh 12000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Panel Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0138.jpg" alt="Panel Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Panel Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 6000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Panel Door', 'KSh 6000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Composite Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0163.jpg" alt="Composite Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Composite Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 14000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Composite Door', 'KSh 14000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Bifold Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0131.jpg" alt="Bifold Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bifold Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 16000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Bifold Door', 'KSh 16000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Pivot Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0132.jpg" alt="Pivot Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pivot Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 18000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Pivot Door', 'KSh 18000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Revolving Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0133.jpg" alt="Revolving Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Revolving Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 35000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Revolving Door', 'KSh 35000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Automatic Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0134.jpg" alt="Automatic Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Automatic Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 45000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Automatic Door', 'KSh 45000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Fire Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0139.jpg" alt="Fire Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Fire Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 20000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Fire Door', 'KSh 20000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Soundproof Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/IMG-20250921-WA0140.jpg" alt="Soundproof Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Soundproof Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 25000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Soundproof Door', 'KSh 25000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Products for Cement (ALL images from cmt/ folder) -->
+                    <div class="product-card detailed-product" data-category="Cement" data-name="Simba Cement 50kg">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/IMG-20250921-WA0116.jpg" alt="Simba Cement 50kg" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Simba Cement 50kg</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 585</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Simba Cement 50kg', 'KSh 585')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Cement" data-name="Bamburi Cement 50kg">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/IMG-20250921-WA0029.jpg" alt="Bamburi Cement 50kg" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bamburi Cement 50kg</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 630</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Bamburi Cement 50kg', 'KSh 630')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Cement" data-name="East African Portland Cement">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/b4.jpg" alt="East African Portland Cement" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">East African Portland Cement</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 580</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('East African Portland Cement', 'KSh 580')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Cement" data-name="Savannah Cement 50kg">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/b1.jpg" alt="Savannah Cement 50kg" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Savannah Cement 50kg</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 570</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Savannah Cement 50kg', 'KSh 570')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Cement" data-name="National Cement 50kg">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/b3.jpg" alt="National Cement 50kg" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">National Cement 50kg</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 590</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('National Cement 50kg', 'KSh 590')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Products for Doors -->
+                    
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Wooden Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/3.jpg" alt="Wooden Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Wooden Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 4500</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Wooden Door', 'KSh 4500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Security Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/4.jpg" alt="Security Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Security Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 12000</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Security Door', 'KSh 12000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Glass Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/5.jpg" alt="Glass Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Glass Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 8500</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Glass Door', 'KSh 8500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Doors" data-name="Sliding Door">
+                        <div class="product-image">
+                            <img src="public/building-materials/d/6.jpg" alt="Sliding Door" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Sliding Door</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 9500</span>
+                                <span class="product-category">Doors</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Sliding Door', 'KSh 9500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Products for Cement -->
+                    <div class="product-card detailed-product" data-category="Cement" data-name="Simba Cement 50kg">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/IMG-20250921-WA0116.jpg" alt="Simba Cement 50kg" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Simba Cement 50kg</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 585</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Simba Cement 50kg', 'KSh 585')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Cement" data-name="Bamburi Cement 50kg">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/IMG-20250921-WA0029.jpg" alt="Bamburi Cement 50kg" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bamburi Cement 50kg</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 630</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Bamburi Cement 50kg', 'KSh 630')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Cement" data-name="East African Portland Cement">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/b4.jpg" alt="East African Portland Cement" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">East African Portland Cement</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 580</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('East African Portland Cement', 'KSh 580')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Cement" data-name="Savannah Cement 50kg">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/b1.jpg" alt="Savannah Cement 50kg" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Savannah Cement 50kg</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 570</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Savannah Cement 50kg', 'KSh 570')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Cement" data-name="National Cement 50kg">
+                        <div class="product-image">
+                            <img src="public/building-materials/cmt/b3.jpg" alt="National Cement 50kg" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">National Cement 50kg</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 590</span>
+                                <span class="product-category">Cement</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('National Cement 50kg', 'KSh 590')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Products for Nails -->
+                    <div class="product-card detailed-product" data-category="Nails" data-name="Wire Nails 3 inch">
+                        <div class="product-image">
+                            <img src="public/building-materials/nls/b2.jpg" alt="Wire Nails 3 inch" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Wire Nails 3 inch</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 180</span>
+                                <span class="product-category">Nails</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Wire Nails 3 inch', 'KSh 180')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Nails" data-name="Wire Nails 2 inch">
+                        <div class="product-image">
+                            <img src="public/building-materials/nls/IMG-20250921-WA0013.jpg" alt="Wire Nails 2 inch" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Wire Nails 2 inch</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 150</span>
+                                <span class="product-category">Nails</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Wire Nails 2 inch', 'KSh 150')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Nails" data-name="Wire Nails 4 inch">
+                        <div class="product-image">
+                            <img src="public/building-materials/nls/IMG-20250920-WA0004.jpg" alt="Wire Nails 4 inch" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Wire Nails 4 inch</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 220</span>
+                                <span class="product-category">Nails</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Wire Nails 4 inch', 'KSh 220')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Nails" data-name="Wire Nails 1 inch">
+                        <div class="product-image">
+                            <img src="public/building-materials/nls/IMG-20250920-WA0006.jpg" alt="Wire Nails 1 inch" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Wire Nails 1 inch</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 120</span>
+                                <span class="product-category">Nails</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Wire Nails 1 inch', 'KSh 120')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Products for Roofing -->
+                    <div class="product-card detailed-product" data-category="Roofing" data-name="Box Profile 3m (per metre)">
+                        <div class="product-image">
+                            <img src="public/building-materials/rf/IMG-20250921-WA0171.jpg" alt="Box Profile 3m (per metre)" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Box Profile 3m (per metre)</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 360</span>
+                                <span class="product-category">Roofing</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Box Profile 3m (per metre)', 'KSh 360')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Roofing" data-name="Corrugated Iron Sheets">
+                        <div class="product-image">
+                            <img src="public/building-materials/rf/IMG-20250921-WA0105.jpg" alt="Corrugated Iron Sheets" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Corrugated Iron Sheets</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 320</span>
+                                <span class="product-category">Roofing</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Corrugated Iron Sheets', 'KSh 320')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Roofing" data-name="Tile Profile Sheets">
+                        <div class="product-image">
+                            <img src="public/building-materials/rf/IMG-20250921-WA0118.jpg" alt="Tile Profile Sheets" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Tile Profile Sheets</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 380</span>
+                                <span class="product-category">Roofing</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Tile Profile Sheets', 'KSh 380')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Roofing" data-name="Ridge Cap">
+                        <div class="product-image">
+                            <img src="public/building-materials/rf/IMG-20250921-WA0122.jpg" alt="Ridge Cap" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Ridge Cap</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 450</span>
+                                <span class="product-category">Roofing</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Ridge Cap', 'KSh 450')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Roofing" data-name="Gutter System">
+                        <div class="product-image">
+                            <img src="public/building-materials/rf/IMG-20250921-WA0128.jpg" alt="Gutter System" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Gutter System</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 280</span>
+                                <span class="product-category">Roofing</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Gutter System', 'KSh 280')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Products for Steel -->
+                    <div class="product-card detailed-product" data-category="Steel" data-name="Y8 Steel Bar">
+                        <div class="product-image">
+                            <img src="public/building-materials/st/1w.jpg" alt="Y8 Steel Bar" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Y8 Steel Bar</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 405</span>
+                                <span class="product-category">Steel</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Y8 Steel Bar', 'KSh 405')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Steel" data-name="Y10 Steel Bar">
+                        <div class="product-image">
+                            <img src="public/building-materials/st/IMG-20250921-WA0157.jpg" alt="Y10 Steel Bar" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Y10 Steel Bar</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 520</span>
+                                <span class="product-category">Steel</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Y10 Steel Bar', 'KSh 520')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Steel" data-name="Y12 Steel Bar">
+                        <div class="product-image">
+                            <img src="public/building-materials/st/IMG-20250921-WA0193.jpg" alt="Y12 Steel Bar" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Y12 Steel Bar</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 650</span>
+                                <span class="product-category">Steel</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Y12 Steel Bar', 'KSh 650')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Steel" data-name="Y16 Steel Bar">
+                        <div class="product-image">
+                            <img src="public/building-materials/st/IMG-20250921-WA0121.jpg" alt="Y16 Steel Bar" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Y16 Steel Bar</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 850</span>
+                                <span class="product-category">Steel</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Y16 Steel Bar', 'KSh 850')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Steel" data-name="Y20 Steel Bar">
+                        <div class="product-image">
+                            <img src="public/building-materials/st/IMG-20250921-WA0041.jpg" alt="Y20 Steel Bar" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Y20 Steel Bar</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 1200</span>
+                                <span class="product-category">Steel</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Y20 Steel Bar', 'KSh 1200')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Products for Timber -->
+                    <div class="product-card detailed-product" data-category="Timber" data-name="Cypress">
+                        <div class="product-image">
+                            <img src="public/building-materials/t/a1.jpg" alt="Hardwood Timber" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Cypress</h3>
+                            <div class="product-details">
+                                <span class="product-category">Timber</span>
+                            </div>
+                            <div class="product-pricing" style="color: var(--muted-foreground); font-size: 0.875rem; line-height: 1.4; margin-bottom: 0.75rem; white-space: pre-line;">
+                                Cypress
+                                2×2@<span style="color:#16a34a;font-weight:600;">18 Ksh</span>
+                                3×2@<span style="color:#16a34a;font-weight:600;">28 Ksh</span>
+                                4×2@<span style="color:#16a34a;font-weight:600;">36 Ksh</span>
+                                6×1@<span style="color:#16a34a;font-weight:600;">26 Ksh</span>
+                                6×2@<span style="color:#16a34a;font-weight:600;">54 Ksh</span>
+                                8×1@<span style="color:#16a34a;font-weight:600;">55 Ksh</span>
+                                10×1@<span style="color:#16a34a;font-weight:600;">70 Ksh</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Hardwood Timber', 'KSh 850')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Timber" data-name="Pine Timber">
+                        <div class="product-image">
+                            <img src="public/building-materials/t/a2.jpg" alt="Softwood Timber" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pine Timber</h3>
+                            <div class="product-details">
+                                <span class="product-category">Timber</span>
+                            </div>
+                            <div class="product-pricing" style="color: var(--muted-foreground); font-size: 0.875rem; line-height: 1.4; margin-bottom: 0.75rem; white-space: pre-line;">
+                                Pine Timber
+                                3×2@<span style="color:#16a34a;font-weight:600;">23 Ksh</span>
+                                4×2@<span style="color:#16a34a;font-weight:600;">28 Ksh</span>
+                                6×2@<span style="color:#16a34a;font-weight:600;">44 Ksh</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Softwood Timber', 'KSh 650')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Timber" data-name="Bluegum timber">
+                        <div class="product-image">
+                            <img src="public/building-materials/t/a3.jpg" alt="Plywood Sheets" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bluegum timber</h3>
+                            <div class="product-details">
+                                <span class="product-category">Timber</span>
+                            </div>
+                            <div class="product-pricing" style="color: var(--muted-foreground); font-size: 0.875rem; line-height: 1.4; margin-bottom: 0.75rem; white-space: pre-line;">
+                                Bluegum timber
+                                2×2@<span style="color:#16a34a;font-weight:600;">15 Ksh</span>
+                                3×2@<span style="color:#16a34a;font-weight:600;">24 Ksh</span>
+                                4×2@<span style="color:#16a34a;font-weight:600;">28 Ksh</span>
+                                6×2@<span style="color:#16a34a;font-weight:600;">44 Ksh</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Plywood Sheets', 'KSh 1200')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Timber" data-name="Gluveria timber">
+                        <div class="product-image">
+                            <img src="public/building-materials/t/a4.jpg" alt="Chipboard Sheets" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Gluveria timber</h3>
+                            <div class="product-details">
+                                <span class="product-category">Timber</span>
+                            </div>
+                            <div class="product-pricing" style="color: var(--muted-foreground); font-size: 0.875rem; line-height: 1.4; margin-bottom: 0.75rem; white-space: pre-line;">
+                                Gluveria timber
+                                8×1@<span style="color:#16a34a;font-weight:600;">30 Ksh</span>
+                                6×1@<span style="color:#16a34a;font-weight:600;">22 Ksh</span>
+                                3×2@<span style="color:#16a34a;font-weight:600;">22 Ksh</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Chipboard Sheets', 'KSh 800')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Timber" data-name="Cypress">
+                        <div class="product-image">
+                            <img src="public/building-materials/t/a5.jpg" alt="MDF Boards" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Cypress</h3>
+                            <div class="product-details">
+                                <span class="product-category">Timber</span>
+                            </div>
+                            <div class="product-pricing" style="color: var(--muted-foreground); font-size: 0.875rem; line-height: 1.4; margin-bottom: 0.75rem; white-space: pre-line;">
+                                Cypress
+                                2×2@<span style="color:#16a34a;font-weight:600;">18 Ksh</span>
+                                3×2@<span style="color:#16a34a;font-weight:600;">28 Ksh</span>
+                                4×2@<span style="color:#16a34a;font-weight:600;">36 Ksh</span>
+                                6×1@<span style="color:#16a34a;font-weight:600;">26 Ksh</span>
+                                6×2@<span style="color:#16a34a;font-weight:600;">54 Ksh</span>
+                                8×1@<span style="color:#16a34a;font-weight:600;">55 Ksh</span>
+                                10×1@<span style="color:#16a34a;font-weight:600;">70 Ksh</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('MDF Boards', 'KSh 950')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Products for Tiles & Flooring -->
+                    <div class="product-card detailed-product" data-category="Tiles" data-name="Ceramic Floor Tiles">
+                        <div class="product-image">
+                            <img src="public/building-materials/tls/IMG-20250921-WA0047.jpg" alt="Ceramic Floor Tiles" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Ceramic Floor Tiles</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 405</span>
+                                <span class="product-category">Tiles</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Ceramic Floor Tiles', 'KSh 405')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Tiles" data-name="Porcelain Tiles">
+                        <div class="product-image">
+                            <img src="public/building-materials/tls/IMG-20250921-WA0007.jpg" alt="Porcelain Tiles" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Porcelain Tiles</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 520</span>
+                                <span class="product-category">Tiles</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Porcelain Tiles', 'KSh 520')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Tiles" data-name="Wall Tiles">
+                        <div class="product-image">
+                            <img src="public/building-materials/tls/IMG-20250921-WA0016.jpg" alt="Wall Tiles" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Wall Tiles</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 380</span>
+                                <span class="product-category">Tiles</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Wall Tiles', 'KSh 380')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Tiles" data-name="Vinyl Flooring">
+                        <div class="product-image">
+                            <img src="public/building-materials/tls/IMG-20250921-WA0017.jpg" alt="Vinyl Flooring" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Vinyl Flooring</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 280</span>
+                                <span class="product-category">Tiles</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Vinyl Flooring', 'KSh 280')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Tiles" data-name="Marble Tiles">
+                        <div class="product-image">
+                            <img src="public/building-materials/tls/IMG-20250921-WA0018.jpg" alt="Marble Tiles" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Marble Tiles</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 850</span>
+                                <span class="product-category">Tiles</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Marble Tiles', 'KSh 850')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <span>GS</span>
+                        </div>
+                        <span class="logo-text">General Supplies</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner for premium general supplies and construction solutions. 
+                        We provide quality building materials, fencing products, and water systems to 
+                        customers worldwide, ensuring reliable service and competitive pricing.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="building-materials.html">Building Materials</a></li>
+                        <li><a href="fencing-materials.html">Fencing Materials</a></li>
+                        <li><a href="water-systems.html">Water Systems</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-info">
+                        <p><strong>Phone:</strong> +254 762 638 255</p>
+                        <p><strong>Email:</strong> info@greenbrooksupplies.com</p>
+                        <p><strong>Address:</strong> Nairobi, Mlolongo, Kenya</p>
+                        <p><strong>Hours:</strong> 24/7 on call and WhatsApp, Sat & Sun 10am-4:30pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 General Supplies. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+254762638255" class="floating-btn call" title="Call Us">
+            📞
+        </a>
+        <a href="https://wa.me/254762638255" class="floating-btn whatsapp" title="WhatsApp Us">
+            💬
+        </a>
+    </div>
+</body>
+</html>

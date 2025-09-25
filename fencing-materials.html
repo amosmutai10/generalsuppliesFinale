@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fencing Materials - General Supplies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <span>GS</span>
+                </div>
+                <span class="logo-text">General Supplies</span>
+            </a>
+
+            
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="building-materials.html" class="nav-link">Building Materials</a>
+                <a href="fencing-materials.html" class="nav-link active">Fencing Materials</a>
+                <a href="water-systems.html" class="nav-link">Water Tanks and Systems</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="menu-icon">☰</span>
+                <span class="close-icon" style="display: none;">✕</span>
+            </button>
+
+            
+            <div class="nav-mobile" id="mobileNav">
+                <nav class="mobile-nav-content">
+                    <a href="index.html" class="nav-link" onclick="closeMobileMenu()">Home</a>
+                    <a href="about.html" class="nav-link" onclick="closeMobileMenu()">About Us</a>
+                    <a href="building-materials.html" class="nav-link" onclick="closeMobileMenu()">Building Materials</a>
+                    <a href="fencing-materials.html" class="nav-link" onclick="closeMobileMenu()">Fencing Materials</a>
+                    <a href="water-systems.html" class="nav-link" onclick="closeMobileMenu()">Water Tanks and Systems</a>
+                    <a href="contact.html" class="nav-link" onclick="closeMobileMenu()">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="product-gallery-section">
+            
+            <div class="product-hero">
+                <div class="product-hero-overlay"></div>
+                <div class="container">
+                    <div class="product-badge">PREMIUM CONSTRUCTION MATERIALS</div>
+                    <h1 class="product-hero-title">Premium Fencing Materials</h1>
+                    <p class="product-hero-description">Complete fencing solutions including posts, panels, gates, and accessories for residential and commercial applications</p>
+                </div>
+            </div>
+
+            
+            <div class="container product-controls">
+                <div class="search-filter-container">
+                    <input type="text" id="productSearch" placeholder="Search products..." class="search-input" onkeyup="filterProducts()">
+                    <div class="category-filters">
+                        <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+                        <button class="filter-btn" onclick="filterByCategory('Barbed Rolls')">Barbed Rolls</button>
+                        <button class="filter-btn" onclick="filterByCategory('Chain Links')">Chain Links</button>
+                        <button class="filter-btn" onclick="filterByCategory('Razor Rolls')">Razor Rolls</button>
+                    </div>
+                </div>
+
+                
+                <div class="products-grid" id="productsGrid">
+                    
+                    <!-- Representative Products for All Tab -->
+                    <div class="product-card" data-category="Chain Links" data-name="Chain Links" onclick="filterByCategory('Chain Links')">
+                        <div class="product-image">
+                            <img src="public/Fencing/cl/IMG-20250921-WA0159.jpg" alt="Chain Links" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Chain Links</h3>
+                            <a href="#" onclick="filterByCategory('Chain Links'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Chain Links" data-name="Chain Links 6ft" onclick="filterByCategory('Chain Links')">
+                        <div class="product-image">
+                            <img src="public/Fencing/cl/IMG-20250921-WA0188.jpg" alt="Chain Links 6ft" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Chain Links 6ft</h3>
+                            <a href="#" onclick="filterByCategory('Chain Links'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="product-card" data-category="Barbed Rolls" data-name="Barbed Rolls" onclick="filterByCategory('Barbed Rolls')">
+                        <div class="product-image">
+                            <img src="public/Fencing/rls/IMG-20250921-WA0004.jpg" alt="Barbed Rolls" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Barbed Rolls</h3>
+                            <a href="#" onclick="filterByCategory('Barbed Rolls'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Razor Rolls" data-name="Razor Rolls" onclick="filterByCategory('Razor Rolls')">
+                        <div class="product-image">
+                            <img src="public/Fencing/rz/rz.jpg" alt="Razor Rolls" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Razor Rolls</h3>
+                            <a href="#" onclick="filterByCategory('Razor Rolls'); return false;" class="product-link">View Products</a>
+                        </div>
+                    </div>
+
+                    <!-- Detailed products removed per request to keep only representative cards. -->
+                    
+                    <!-- Detailed Products (hidden by default via .detailed-product) -->
+                    <div class="product-card detailed-product" data-category="Chain Links" data-name="Chain Link Panel 1.8m">
+                        <div class="product-image">
+                            <img src="public/Fencing/cl/IMG-20250921-WA0190.jpg" alt="Chain Link Panel 1.8m" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Chain Link Panel 1.8m</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 1800</span>
+                                <span class="product-category">Chain Links</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Chain Link Panel 1.8m', 'KSh 1800')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Chain Links" data-name="Chain Link Wire Roll">
+                        <div class="product-image">
+                            <img src="public/Fencing/cl/IMG-20250921-WA0191.jpg" alt="Chain Link Wire Roll" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Chain Link Wire Roll</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 2880</span>
+                                <span class="product-category">Chain Links</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Chain Link Wire Roll', 'KSh 2880')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Chain Links" data-name="Welded Mesh Panel 2x3m">
+                        <div class="product-image">
+                            <img src="public/Fencing/cl/IMG-20250921-WA0189.jpg" alt="Welded Mesh Panel 2x3m" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Welded Mesh Panel 2x3m</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 2250</span>
+                                <span class="product-category">Chain Links</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Welded Mesh Panel 2x3m', 'KSh 2250')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Barbed Rolls" data-name="Barbed Wire Roll 100m">
+                        <div class="product-image">
+                            <img src="public/Fencing/rls/IMG-20250921-WA0004.jpg" alt="Barbed Wire Roll 100m" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Barbed Wire Roll 100m</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 3200</span>
+                                <span class="product-category">Barbed Rolls</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Barbed Wire Roll 100m', 'KSh 3200')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Barbed Rolls" data-name="Barbed Wire Roll 200m">
+                        <div class="product-image">
+                            <img src="public/Fencing/rls/IMG-20250921-WA0011.jpg" alt="Barbed Wire Roll 200m" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Barbed Wire Roll 200m</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 5800</span>
+                                <span class="product-category">Barbed Rolls</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Barbed Wire Roll 200m', 'KSh 5800')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Razor Rolls" data-name="Razor Wire Coil 10m">
+                        <div class="product-image">
+                            <img src="public/Fencing/rz/rz.jpg" alt="Razor Wire Coil 10m" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Razor Wire Coil 10m</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 1800</span>
+                                <span class="product-category">Razor Rolls</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Razor Wire Coil 10m', 'KSh 1800')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card detailed-product" data-category="Razor Rolls" data-name="Razor Wire Coil 20m">
+                        <div class="product-image">
+                            <img src="public/Fencing/rz/rz.jpg" alt="Razor Wire Coil 20m" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Razor Wire Coil 20m</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 3200</span>
+                                <span class="product-category">Razor Rolls</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Razor Wire Coil 20m', 'KSh 3200')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <span>GS</span>
+                        </div>
+                        <span class="logo-text">General Supplies</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner for premium general supplies and construction solutions. 
+                        We provide quality building materials, fencing products, and water systems to 
+                        customers worldwide, ensuring reliable service and competitive pricing.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="building-materials.html">Building Materials</a></li>
+                        <li><a href="fencing-materials.html">Fencing Materials</a></li>
+                        <li><a href="water-systems.html">Water Systems</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-info">
+                        <p><strong>Phone:</strong> +254 762 638 255</p>
+                        <p><strong>Email:</strong> info@greenbrooksupplies.com</p>
+                        <p><strong>Address:</strong> Nairobi, Mlolongo, Kenya</p>
+                        <p><strong>Hours:</strong> 24/7 on call and WhatsApp, Sat & Sun 10am-4:30pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 General Supplies. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+254762638255" class="floating-btn call" title="Call Us">
+            📞
+        </a>
+        <a href="https://wa.me/254762638255" class="floating-btn whatsapp" title="WhatsApp Us">
+            💬
+        </a>
+    </div>
+</body>
+</html>

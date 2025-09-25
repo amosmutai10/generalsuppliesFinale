@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Systems - General Supplies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <span>GS</span>
+                </div>
+                <span class="logo-text">General Supplies</span>
+            </a>
+
+            
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="building-materials.html" class="nav-link">Building Materials</a>
+                <a href="fencing-materials.html" class="nav-link">Fencing Materials</a>
+                <a href="water-systems.html" class="nav-link active">Water Tanks and Systems</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span class="menu-icon">☰</span>
+                <span class="close-icon" style="display: none;">✕</span>
+            </button>
+
+            
+            <div class="nav-mobile" id="mobileNav">
+                <nav class="mobile-nav-content">
+                    <a href="index.html" class="nav-link" onclick="closeMobileMenu()">Home</a>
+                    <a href="about.html" class="nav-link" onclick="closeMobileMenu()">About Us</a>
+                    <a href="building-materials.html" class="nav-link" onclick="closeMobileMenu()">Building Materials</a>
+                    <a href="fencing-materials.html" class="nav-link" onclick="closeMobileMenu()">Fencing Materials</a>
+                    <a href="water-systems.html" class="nav-link" onclick="closeMobileMenu()">Water Tanks and Systems</a>
+                    <a href="contact.html" class="nav-link" onclick="closeMobileMenu()">Contact Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="product-gallery-section">
+            
+            <div class="product-hero">
+                <div class="product-hero-overlay"></div>
+                <div class="container">
+                    <div class="product-badge">PREMIUM CONSTRUCTION MATERIALS</div>
+                    <h1 class="product-hero-title">Superior Water Tanks and Systems</h1>
+                    <p class="product-hero-description">High-capacity water storage solutions for domestic, agricultural, and industrial use. Including tanks and accessories</p>
+                </div>
+            </div>
+
+            
+            <div class="container product-controls">
+                <div class="search-filter-container">
+                    <input type="text" id="productSearch" placeholder="Search products..." class="search-input" onkeyup="filterProducts()">
+                </div>
+
+                
+                <div class="products-grid" id="productsGrid">
+                    
+                    <!-- Water Tank Products Only -->
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 500L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0165.jpg" alt="Water Tank 500L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 500L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 7650</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 500L', 'KSh 7650')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 750L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0154.jpg" alt="Water Tank 750L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 750L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 12000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 750L', 'KSh 12000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 1000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0187.jpg" alt="Water Tank 1000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 1000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 4800</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 1000L', 'KSh 4800')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 1500L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0195.jpg" alt="Water Tank 1500L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 1500L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 22000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 1500L', 'KSh 22000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 2000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0175.jpg" alt="Water Tank 2000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 2000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 10900</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 2000L', 'KSh 10900')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 2500L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0174.jpg" alt="Water Tank 2500L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 2500L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 35000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 2500L', 'KSh 35000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 4000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0184.jpg" alt="Water Tank 4000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 4000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 19200</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 4000L', 'KSh 19200')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 5000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0176.jpg" alt="Water Tank 5000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 5000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 26800</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 5000L', 'KSh 26800')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 6000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0186.jpg" alt="Water Tank 6000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 6000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 29200</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 6000L', 'KSh 29200')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 8000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0162.jpg" alt="Water Tank 8000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 8000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 34600</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 8000L', 'KSh 34600')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 10000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0170.jpg" alt="Water Tank 10000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 10000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 47900</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 10000L', 'KSh 47900')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 12000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0168.jpg" alt="Water Tank 12000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 12000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 150000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 12000L', 'KSh 150000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 16000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0169.jpg" alt="Water Tank 16000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 16000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 98500</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 16000L', 'KSh 98500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 20000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0177.jpg" alt="Water Tank 20000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 20000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 153000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 20000L', 'KSh 153000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 24000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0173.jpg" alt="Water Tank 24000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 24000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 192500</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 24000L', 'KSh 192500')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 25000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0185.jpg" alt="Water Tank 25000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 25000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 320000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 25000L', 'KSh 320000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 30000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0190.jpg" alt="Water Tank 30000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 30000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 380000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 30000L', 'KSh 380000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 35000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0192.jpg" alt="Water Tank 35000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 35000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 450000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 35000L', 'KSh 450000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 40000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0194.jpg" alt="Water Tank 40000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 40000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 520000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 40000L', 'KSh 520000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 45000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0197.jpg" alt="Water Tank 45000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 45000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 580000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 45000L', 'KSh 580000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="Tanks" data-name="Water Tank 50000L">
+                        <div class="product-image">
+                            <img src="public/Water-tanks/IMG-20250921-WA0198.jpg" alt="Water Tank 50000L" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Water Tank 50000L</h3>
+                            <div class="product-details">
+                                <span class="product-price">KSh 650000</span>
+                                <span class="product-category">Tanks</span>
+                            </div>
+                            <button class="whatsapp-btn" onclick="orderProduct('Water Tank 50000L', 'KSh 650000')">📱 Order via WhatsApp</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <span>GS</span>
+                        </div>
+                        <span class="logo-text">General Supplies</span>
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner for premium general supplies and construction solutions. 
+                        We provide quality building materials, fencing products, and water systems to 
+                        customers worldwide, ensuring reliable service and competitive pricing.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="building-materials.html">Building Materials</a></li>
+                        <li><a href="fencing-materials.html">Fencing Materials</a></li>
+                        <li><a href="water-systems.html">Water Systems</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="contact-info">
+                        <p><strong>Phone:</strong> +254 762 638 255</p>
+                        <p><strong>Email:</strong> info@greenbrooksupplies.com</p>
+                        <p><strong>Address:</strong> Nairobi, Mlolongo, Kenya</p>
+                        <p><strong>Hours:</strong> 24/7 on call and WhatsApp, Sat & Sun 10am-4:30pm</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 General Supplies. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+        <a href="tel:+254762638255" class="floating-btn call" title="Call Us">
+            📞
+        </a>
+        <a href="https://wa.me/254762638255" class="floating-btn whatsapp" title="WhatsApp Us">
+            💬
+        </a>
+    </div>
+</body>
+</html>
