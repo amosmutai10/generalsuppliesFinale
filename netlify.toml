@@ -1,1 +1,11 @@
+# In netlify.toml at the root of your repository
 
+[build]
+  # Runs the build and the static export command
+  command = "next build && next export"
+  # Sets the publish directory to the 'out' folder created by 'next export'
+  publish = "out"
+
+[context.production.environment]
+  # Tells the Next.js plugin to skip running, as we are doing a static export
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
